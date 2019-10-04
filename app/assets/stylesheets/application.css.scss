@@ -13,9 +13,39 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 body {
 	margin: 42px;
 	font-style: italic;
 	font-weight: bold;
+	background-image: url("assets/background.jpg");
+	background-color: #cccccc;
+}
+
+.text-container > div {
+        width: 50%;
+        height: 200px;
+        margin: 5px;
+        border-radius: 3px;
+
+        
+
+}
+
+.light-container > div {
+	width: 50%;
+	height: 100px;
+	margin: 5px;
+	border-radius: 3px;
+}
+.img-container >div {
+	width: 45%;
+	height: 150px;
+	margin: 5px;
+	border-radius: 3px;
+
+
 }
 
