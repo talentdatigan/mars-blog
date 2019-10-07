@@ -1,9 +1,12 @@
 <html>
 
+<div class = "container_for_links">
 <ul class="nav nav-pills">
-  <li role="presentation"><a href="/">Home</a></li>
-  <li role="presentation"><a href="mars_weather/home">Mars Weather</a></li>
+  <li><%= link_to "Home" ,"/"%></li>
+  <li><%= link_to "Mars Weather", "/mars_overview/mars_weather"%></li>
+  <li><%= link_to "Insight Mission", "/mars_overview/insight_mission" %></li>
 </ul>
+</div>
 
 <body>
 
@@ -12,7 +15,7 @@
 body {
 	background-image: url("/assets/background.jpg ");
     background-repeat:no-repeat;
-    background-size:cover;
+    background-size:cover;	
 } 
 
 </style>
