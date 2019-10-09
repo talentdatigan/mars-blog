@@ -1,0 +1,35 @@
+<%= form_with(model: rover, local: true) do |form| %>
+  <% if rover.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rover.errors.count, "error") %> prohibited this rover from being saved:</h2>
+
+      <ul>
+        <% rover.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<p><img src = "/assets/walle.jpg" width="650" height="450" align = "right">
+</p>
+
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :model %>
+    <%= form.select :model,Rover.models.keys, prompt: 'Select a rover model' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :purpose %>
+    <%= form.select :purpose,Rover.purposes.keys, prompt: 'Select a rover purpose' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
