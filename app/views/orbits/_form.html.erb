@@ -1,0 +1,37 @@
+<%= form_with(model: orbit, local: true) do |form| %>
+  <% if orbit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(orbit.errors.count, "error") %> prohibited this orbit from being saved:</h2>
+
+      <ul>
+        <% orbit.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :form %>
+    <%= form.select :form,Orbit.forms.keys, prompt: 'Select an orbit shape' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :height %>
+    <%= form.select :height,Orbit.heights.keys, prompt: 'Select an orbit height' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :engine_id %>
+    <%= form.collection_select(:engine_id, @engines, :id, :name ) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

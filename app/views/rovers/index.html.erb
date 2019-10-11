@@ -17,6 +17,7 @@
   <tbody>
     <% @rovers.each do |rover| %>
       <tr>
+      
         <td><%= rover.name %></td>
         <td><%= rover.model  %></td> 
         <td><%= rover.purpose %></td>
@@ -26,6 +27,7 @@
         <td><%= link_to 'Edit', edit_rover_path(rover) %></td>
         <td>&nbsp;</td>
         <td><%= link_to 'Destroy', rover, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
       </tr>
     <% end %>
   </tbody>

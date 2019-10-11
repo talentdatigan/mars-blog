@@ -1,0 +1,32 @@
+<%= form_with(model: engine, local: true) do |form| %>
+  <% if engine.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(engine.errors.count, "error") %> prohibited this engine from being saved:</h2>
+
+      <ul>
+        <% engine.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :model %>
+    <%= form.select :model,Engine.models.keys, prompt: 'Select a rocket model' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :astronauts %>
+    <%= form.number_field :astronauts %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

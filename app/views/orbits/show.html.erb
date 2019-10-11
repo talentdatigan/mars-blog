@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @orbit.name %>
+</p>
+
+<p>
+  <strong>Form:</strong>
+  <%= @orbit.form %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @orbit.height %>
+</p>
+
+<p>
+  <strong>Engine:</strong>
+  <%= @orbit.engine.name %>
+</p>
+
+<%= link_to 'Edit', edit_orbit_path(@orbit) %> |
+<%= link_to 'Back', orbits_path %>
