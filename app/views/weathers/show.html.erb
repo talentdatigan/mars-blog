@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @weather.day %>
+</p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @weather.month %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @weather.year %>
+</p>
+
+<p>
+  <strong>Solstice:</strong>
+  <%= @weather.solstice %>
+</p>
+
+<p>
+  <strong>Mintemp:</strong>
+  <%= @weather.minTemp %>
+</p>
+
+<p>
+  <strong>Maxtemp:</strong>
+  <%= @weather.maxTemp %>
+</p>
+
+<%= link_to 'Edit', edit_weather_path(@weather) %> |
+<%= link_to 'Back', weathers_path %>
