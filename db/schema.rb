@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_10_193633) do
+ActiveRecord::Schema.define(version: 2019_10_12_232513) do
 
   create_table "engines", force: :cascade do |t|
     t.string "name"
@@ -30,19 +30,21 @@ ActiveRecord::Schema.define(version: 2019_10_10_193633) do
     t.index ["engine_id"], name: "index_orbits_on_engine_id"
   end
 
-  create_table "rockets", force: :cascade do |t|
-    t.string "name"
-    t.string "model"
-    t.integer "additional_boosters"
-    t.integer "astronauts"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "rovers", force: :cascade do |t|
     t.string "name"
     t.string "model"
     t.string "purpose"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "weathers", force: :cascade do |t|
+    t.integer "day"
+    t.integer "month"
+    t.integer "year"
+    t.integer "solstice"
+    t.integer "minTemp"
+    t.integer "maxTemp"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
