@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'periods/measure'
+  get 'periods/result'
   resources :weathers
   resources :orbits
   resources :engines
