@@ -10,4 +10,6 @@ class MarsOverviewController < ApplicationController
 	def insight_mission
 
 	end
+
+	
 end
