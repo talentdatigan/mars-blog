@@ -2,36 +2,31 @@
 
 <h1>Weathers</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Day</th>
-      <th>Month</th>
-      <th>Year</th>
-      <th>Solstice</th>
-      <th>Mintemp</th>
-      <th>Maxtemp</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @weathers.each do |weather| %>
-      <tr>
-        <td><%= weather.day %></td>
-        <td><%= weather.month %></td>
-        <td><%= weather.year %></td>
-        <td><%= weather.solstice %></td>
-        <td><%= weather.minTemp %></td>
-        <td><%= weather.maxTemp %></td>
-        <td><%= link_to 'Show', weather %></td>
-        <td><%= link_to 'Edit', edit_weather_path(weather) %></td>
-        <td><%= link_to 'Destroy', weather, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Weather', new_weather_path %>
+<div id="graphContainer" style="width:100%; height:400px;"></div>
+<script type=”text/javascript”>
+$(function () {
+var myChart = Highcharts.chart('container',{
+chart: {
+type: 'bar'
+},
+title: {
+text: 'Fruit Consumption'
+},
+xAxis: {
+categories: ['Apples', 'Bananas', 'Oranges']
+},
+yAxis: {
+title: {
+text: 'Fruit eaten'
+}
+},
+series: [{
+name: 'Jane',
+data: [1, 0, 4]
+}, {
+name: 'John',
+data: [5, 7, 3]
+}]
+});
+});
+</script>
