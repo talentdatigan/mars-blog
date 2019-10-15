@@ -13,7 +13,12 @@ class OrbitsController < ApplicationController
     end
 
   end
-
+  
+  def get_period
+    @orbit_radius = (params[:height].to_i + 6370)
+    return @orbit_radius
+    
+  end
 
   # GET /orbits/1
   # GET /orbits/1.json

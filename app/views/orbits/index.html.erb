@@ -35,5 +35,14 @@
 
 <br>
 <%= "Currently there are" + " " + @count.to_s + " " + "spaceships in orbit"%>
-<p><%= link_to 'New Orbit', new_orbit_path %> | <%=link_to 'Measure Period', '/periods/measure'%>
-</p>
+
+<p><%= link_to 'New Orbit', new_orbit_path %> | <%=link_to 'Measure Period', '/periods/measure'%></p>
+ 
+ 
+  <p>Enter your orbit's height and the period of your orbit will be returned!</p>
+  <%= form_tag( "/orbits/index", method: "get") do %>
+  <%= label_tag "Calculate the period of your orbit" %>
+  <%= text_field_tag :height %>
+  <%= submit_tag("Measure") %>
+  <% end %>
+
