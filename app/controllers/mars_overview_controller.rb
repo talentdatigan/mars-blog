@@ -4,13 +4,14 @@ class MarsOverviewController < ApplicationController
 	end
 
 	def mars_weather
-		
-		weather = Weather.all
-		@MinTemp = []
-		weather.each do |temp|
-			@MinTemp << temp.minTemp
-		end
 
+		weather = MonthlyWeather.all
+		@MinTemps = []
+		@MaxTemps = []
+		weather.each do |temp|
+			@MinTemps << temp.minTemp
+			@MaxTemps << temp.maxTempgit
+		end
 
 	end
 

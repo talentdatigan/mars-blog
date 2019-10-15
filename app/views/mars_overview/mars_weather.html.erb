@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'line'
         },
         title: {
-            text: 'Mars Temperature per Solstice'
+            text: 'Mars Temperature per Earth Month (2018)'
         },
         xAxis: {
             categories: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
@@ -31,11 +31,11 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         },
         series: [{
-            name: 'Jane',
-            data: [1, 0, 4]
+            name: 'Average Minimum temperature',
+            data: <%= @MinTemps %>
         }, {
-            name: 'John',
-            data: [5, 7, 3]
+            name: 'Average Minimum temperature',
+            data: <%= @MaxTemps %>
         }]
     });
 });
