@@ -1,3 +1,4 @@
+<script src="https://code.highcharts.com/highcharts.js"></script>
 <h1>Enter the height of your orbit and the period will be returned</h1>
 <%= form_tag( "/periods/measure", method: "get" ) do %>
 <%= label_tag "Enter the height of your orbit" %>
@@ -8,3 +9,33 @@
 
 <h1>Your orbit will reach a full cycle in :</h1>
 <h3><%= @orbit_period.to_f %> days</h3> 
+<div id="container" style="width:100%; height:400px;"></div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var myChart = Highcharts.chart('container', {
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Fruit Consumption'
+        },
+        xAxis: {
+            categories: ['Apples', 'Bananas', 'Oranges']
+        },
+        yAxis: {
+            title: {
+                text: 'Fruit eaten'
+            }
+        },
+        series: [{
+            name: 'Jane',
+            data: [1, 0, 4]
+        }, {
+            name: 'John',
+            data: [5, 7, 3]
+        }]
+    });
+});
+</script>
