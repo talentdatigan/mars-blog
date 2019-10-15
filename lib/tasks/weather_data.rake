@@ -10,8 +10,9 @@ namespace :weather_data do
                  day: row[0].to_i,
                  month:row[1].to_i,
                  year: row[2].to_i,
-                 minTemp: row[3].to_i,
-                 maxTemp: row[4].to_i
+                 solstice: row[3].to_i,
+                 minTemp: row[4].to_i,
+                 maxTemp: row[5].to_i
       )
     end
 

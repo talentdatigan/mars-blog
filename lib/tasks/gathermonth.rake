@@ -23,14 +23,25 @@ namespace :gathermonth do
   	yearweather = nil
 
   	singleyearweather.each do |index|
+      puts "New Month"
+      totalMin = 0
+      totalMax = 0
+      dayCounter = 0
+      currentMonth = index[0].month
+
   		index.each do |i|
-  		puts i.month
+				puts i.month
+        dayCounter += 1
+        totalMin += i.minTemp.to_i
+        totalMax += i.maxTemp.to_i
+      end
+
   	MonthlyWeather.create!(
-  		month: i.month.to_s,
-  		minTemp: i.minTemp.to_i,
-  		maxTemp:i.maxTemp.to_i
+  		month: currentMonth.to_s,
+  		minTemp: totalMin/dayCounter.to_f,
+  		maxTemp: totalMax/dayCounter.to_f
   		)
-  end
+
   end
 
   end
