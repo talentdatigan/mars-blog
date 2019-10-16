@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_12_232513) do
+ActiveRecord::Schema.define(version: 2019_10_16_221203) do
 
   create_table "engines", force: :cascade do |t|
     t.string "name"
     t.string "model"
     t.integer "astronauts"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "monthly_weathers", force: :cascade do |t|
+    t.string "month"
+    t.float "minTemp"
+    t.float "maxTemp"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

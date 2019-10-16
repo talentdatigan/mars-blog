@@ -5,6 +5,14 @@ class MarsOverviewController < ApplicationController
 
 	def mars_weather
 
+		weather = MonthlyWeather.all
+		@MinTemps = []
+		@MaxTemps = []
+		weather.each do |temp|
+			@MinTemps << temp.minTemp
+			@MaxTemps << temp.maxTemp
+		end
+
 	end
 
 	def insight_mission

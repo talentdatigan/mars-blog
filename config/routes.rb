@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :monthly_weathers
   get 'periods/measure'
   get 'periods/result'
   resources :weathers
