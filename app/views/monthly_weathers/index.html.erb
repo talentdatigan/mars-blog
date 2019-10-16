@@ -4,25 +4,25 @@
 
 <table style="width: 30%;">
   <thead>
-    <tr>
-      <th>Month</th>
-      <th>Mintemp</th>
-      <th>Maxtemp</th>
-      <th colspan="3"></th>
-    </tr>
+  <tr>
+    <th>Month</th>
+    <th>Mintemp</th>
+    <th>Maxtemp</th>
+    <th colspan="3"></th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @monthly_weathers.each do |monthly_weather| %>
-      <tr>
-        <td><%= monthly_weather.month %></td>
-        <td><%= monthly_weather.minTemp %></td>
-        <td><%= monthly_weather.maxTemp %></td>
-        <td><%= link_to 'Show', monthly_weather %></td>
-        <td><%= link_to 'Edit', edit_monthly_weather_path(monthly_weather) %></td>
-        <td><%= link_to 'Destroy', monthly_weather, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+  <% @monthly_weathers.each do |monthly_weather| %>
+    <tr>
+      <td><%= monthly_weather.month %></td>
+      <td><%= monthly_weather.minTemp %></td>
+      <td><%= monthly_weather.maxTemp %></td>
+      <td><%= link_to 'Show', monthly_weather %></td>
+      <td><%= link_to 'Edit', edit_monthly_weather_path(monthly_weather) %></td>
+      <td><%= link_to 'Destroy', monthly_weather, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
   </tbody>
 </table>
 

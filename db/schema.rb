@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_15_161321) do
+ActiveRecord::Schema.define(version: 2019_10_16_155325) do
 
   create_table "engines", force: :cascade do |t|
     t.string "name"
@@ -24,25 +24,6 @@ ActiveRecord::Schema.define(version: 2019_10_15_161321) do
     t.string "month"
     t.float "minTemp"
     t.float "maxTemp"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "orbits", force: :cascade do |t|
-    t.string "name"
-    t.string "form"
-    t.string "height"
-    t.integer "engine_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["engine_id"], name: "index_orbits_on_engine_id"
-  end
-
-  create_table "rockets", force: :cascade do |t|
-    t.string "name"
-    t.string "model"
-    t.integer "additional_boosters"
-    t.integer "astronauts"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -66,5 +47,4 @@ ActiveRecord::Schema.define(version: 2019_10_15_161321) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "orbits", "engines"
 end

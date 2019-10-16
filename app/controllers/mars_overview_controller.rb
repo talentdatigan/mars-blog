@@ -1,23 +1,23 @@
 class MarsOverviewController < ApplicationController
-	def index
+  def index
 
-	end
+  end
 
-	def mars_weather
+  def mars_weather
 
-		weather = MonthlyWeather.all
-		@MinTemps = []
-		@MaxTemps = []
-		weather.each do |temp|
-			@MinTemps << temp.minTemp
-			@MaxTemps << temp.maxTempgit
-		end
+    weather = MonthlyWeather.all
+    @MinTemps = []
+    @MaxTemps = []
+    weather.each do |temp|
+      @MinTemps << temp.minTemp
+      @MaxTemps << temp.maxTemp
+    end
 
-	end
+  end
 
-	def insight_mission
+  def insight_mission
 
-	end
+  end
 
-	
+
 end

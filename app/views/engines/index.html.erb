@@ -4,28 +4,28 @@
 
 <table>
   <thead>
-    <tr>
-      <th>Name</th>
-      <th>Model</th>
-      <th>Astronauts</th>
-      <th colspan="3"></th>
-    </tr>
+  <tr>
+    <th>Name</th>
+    <th>Model</th>
+    <th>Astronauts</th>
+    <th colspan="3"></th>
+  </tr>
   </thead>
-<iframe src="https://giphy.com/embed/S99cgkURVO62qemEKM" width="380" height="270" align = 'right' frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/nasa-nasareactions-S99cgkURVO62qemEKM"></a></p>
+  <iframe src="https://giphy.com/embed/S99cgkURVO62qemEKM" width="380" height="270" align = 'right' frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/nasa-nasareactions-S99cgkURVO62qemEKM"></a></p>
   <tbody>
-    <% @engines.each do |engine| %>
-      <tr>
-        <td><%= engine.name %></td>
-        <td><%= engine.model %></td>
-        <td><%= engine.astronauts %></td>
-        <td>&nbsp;</td>
-        <td><%= link_to 'Show', engine %></td>
-        <td>&nbsp;</td>
-        <td><%= link_to 'Edit', edit_engine_path(engine) %></td>
-        <td>&nbsp;</td>
-        <td><%= link_to 'Destroy', engine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+  <% @engines.each do |engine| %>
+    <tr>
+      <td><%= engine.name %></td>
+      <td><%= engine.model %></td>
+      <td><%= engine.astronauts %></td>
+      <td>&nbsp;</td>
+      <td><%= link_to 'Show', engine %></td>
+      <td>&nbsp;</td>
+      <td><%= link_to 'Edit', edit_engine_path(engine) %></td>
+      <td>&nbsp;</td>
+      <td><%= link_to 'Destroy', engine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
   </tbody>
 </table>
 
