@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-
 <h1>Orbits</h1>
 
 <table>
@@ -38,11 +37,6 @@
 
 <p><%= link_to 'New Orbit', new_orbit_path %> | <%=link_to 'Measure Period', '/periods/measure'%></p>
  
- 
-  <p>Enter your orbit's height and the period of your orbit will be returned!</p>
-  <%= form_tag( "/orbits/index", method: "get") do %>
-  <%= label_tag "Calculate the period of your orbit" %>
-  <%= text_field_tag :height %>
-  <%= submit_tag("Measure") %>
-  <% end %>
+ <p><a href = '/orbits.json' target = '_blank' align = 'bottom'> See Json</a></p>
 
+<p><a href = 'https://api.nasa.gov/planetary/apod?api_key=6hRPShdLwc3NKUIn9ZzWTYOmbpKfWoXPIGmTdEZL' target = '_blank' >See json for image on right </a></p>

@@ -1,9 +1,0 @@
-<h1>Your orbit will last for:</h1>
-<h3><%= @orbit_period.to_i %></h3>
-<p>Enter the height of your orbit and the period will be returned</p>
-<%= form_tag( "/mars_overview/period_measure", method: "get" ) do %>
-<%= label_tag "convert a temp" %>
-<%= text_field_tag :height %>
-<%= submit_tag("Measure") %>
-
-<% end %>

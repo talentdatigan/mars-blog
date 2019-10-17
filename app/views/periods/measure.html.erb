@@ -1,3 +1,4 @@
+
 <h1>Enter the height of your orbit and the period will be returned</h1>
 <%= form_tag( "/periods/measure", method: "get" ) do %>
 <%= label_tag "Enter the height of your orbit" %>
@@ -6,5 +7,6 @@
 
 <%end%>
 
+
 <h1>Your orbit will reach a full cycle in :</h1>
-<h3><%= @orbit_period.to_f %> days</h3> 
+<h3><%= @orbit_period_transformed %></h3> 
