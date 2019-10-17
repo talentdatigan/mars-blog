@@ -1,2 +1,0 @@
-class MonthlyWeather < ApplicationRecord
-end

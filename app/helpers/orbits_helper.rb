@@ -1,2 +1,0 @@
-module OrbitsHelper
-end
