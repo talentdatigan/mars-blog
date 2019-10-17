@@ -5,6 +5,13 @@ class WeathersController < ApplicationController
   # GET /weathers.json
   def index
     @weathers = Weather.all
+    @years = @weathers.distinct.pluck(:year)
+    @months = (@weathers.distinct.pluck(:month)).sort
+
+    if params[:commit] =="Go!"
+      redirect_to mars_overview_display_path(year: params[:search_year], month: params[:search_month])
+    end
+
   end
 
   # GET /weathers/1

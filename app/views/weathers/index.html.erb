@@ -2,6 +2,16 @@
 
 <h1>Weathers</h1>
 
+<div class="from">
+  <%= form_with :url => {:action => :index}, :method => "get" do |form| %>
+  <em><%= form.label "Select Year and Month:" %>></em>
+    <%= form.select(:search_year, @years) %>
+    <%= form.select(:search_month, @months) %>
+    <%= form.submit("Go!") %>
+  <% end %>
+</div>
+
+<h1><b>Historical Weather Data</b></h1>
 <table>
   <thead>
   <tr>
@@ -31,7 +41,3 @@
   <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Weather', new_weather_path %>

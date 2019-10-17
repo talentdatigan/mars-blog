@@ -19,5 +19,9 @@ class MarsOverviewController < ApplicationController
 
 	end
 
-	
+	def display
+		@year = params[:year]
+		@month = params[:month]
+	end
+
 end
