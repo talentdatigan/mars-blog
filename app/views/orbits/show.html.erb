@@ -20,6 +20,7 @@
   <%= @orbit.engine.name %>
 </p>
 
-<%= link_to 'Edit', edit_orbit_path(@orbit) %> |
-<%= link_to 'Back', orbits_path %>
-<p><a href = '<%= @orbit.id %>.json' target = '_blank'>See Json</a></p>
+<%= link_to 'Edit', edit_orbit_path(@orbit), class: 'linkButton' %> |
+<%= link_to 'Back', orbits_path, class: 'linkButton' %>
+<br>
+<a href = '<%= @orbit.id %>.json' target = '_blank'><div class="linkButton">See Json</div></a>

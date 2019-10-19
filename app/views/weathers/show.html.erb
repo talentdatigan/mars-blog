@@ -30,5 +30,5 @@
   <%= @weather.maxTemp %>
 </p>
 
-<%= link_to 'Back', weathers_path %>
-<p><a href = '<%= @weather.id %>.json' target = '_blank'>See Json</a></p>
+<%= link_to 'Back', weathers_path, :class => 'linkButton' %>
+<a href = '<%= @weather.id %>.json' target = '_blank'><div class="linkButton">See Json</div></a>

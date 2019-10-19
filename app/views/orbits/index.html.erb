@@ -22,11 +22,11 @@
         <td><%= orbit.engine.name %></td>
 
         <td>&nbsp;</td>
-        <td><%= link_to 'Show', orbit %></td>
+        <td><%= link_to 'Show', orbit, class: 'linkButton2' %></td>
         <td>&nbsp;</td>
-        <td><%= link_to 'Edit', edit_orbit_path(orbit) %></td>
+        <td><%= link_to 'Edit', edit_orbit_path(orbit), class: 'linkButton2' %></td>
         <td>&nbsp;</td>
-        <td><%= link_to 'Destroy', orbit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', orbit, method: :delete, data: { confirm: 'Are you sure?' }, class: 'linkButton2' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -35,8 +35,8 @@
 <br>
 <%= "Currently there are" + " " + @count.to_s + " " + "spaceships in orbit"%>
 
-<p><%= link_to 'New Orbit', new_orbit_path %> | <%=link_to 'Measure Period', '/periods/measure'%></p>
- 
- <p><a href = '/orbits.json' target = '_blank' align = 'bottom'> See Json</a></p>
+<p><%= link_to 'New Orbit', new_orbit_path, class: 'linkButton' %> | <%=link_to 'Measure Period', '/periods/measure', class: 'linkButton'%></p>
 
-<p><a href = 'https://api.nasa.gov/planetary/apod?api_key=6hRPShdLwc3NKUIn9ZzWTYOmbpKfWoXPIGmTdEZL' target = '_blank' >See json for image on right </a></p>
+<a href = '/orbits.json' target = '_blank' align = 'bottom'><div class="linkButton">See Json</div></a>
+
+<a href = 'https://api.nasa.gov/planetary/apod?api_key=6hRPShdLwc3NKUIn9ZzWTYOmbpKfWoXPIGmTdEZL' target = '_blank' ><div class="linkButton">See json for image on right</div></a>

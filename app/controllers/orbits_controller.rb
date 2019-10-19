@@ -33,6 +33,7 @@ class OrbitsController < ApplicationController
 
   # GET /orbits/1/edit
   def edit
+    @engines = Engine.all
   end
 
   # POST /orbits

@@ -5,10 +5,10 @@
 <div class="searchForm">
   <h2><b>Search for a month of data</b></h2>
   <%= form_with :url => {:action => :index}, :method => "get" do |form| %>
-  <em><%= form.label "Select Year and Month:" %>></em>
+  <em><%= form.label "Select Year and Month:", style: 'font-size:18px;' %></em>
     <%= form.select(:search_year, @years) %>
     <%= form.select(:search_month, @months) %>
-    <%= form.submit("Go!") %>
+    <%= form.submit "Go!", :class => 'linkButton' %>
   <% end %>
 </div>
 
@@ -35,9 +35,7 @@
       <td><%= weather.solstice %></td>
       <td><%= weather.minTemp %></td>
       <td><%= weather.maxTemp %></td>
-
-      <td><div class="linkButton"><%= link_to 'Show', weather %></div></td>
-      
+      <td><%= link_to 'Show', weather, class: 'linkButton2'  %></td>
 
     </tr>
   <% end %>

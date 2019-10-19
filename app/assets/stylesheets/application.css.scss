@@ -29,9 +29,6 @@ body {
         height: 200px;
         margin: 5px;
         border-radius: 3px;
-
-        
-
 }
 
 .light-container > div {
@@ -40,18 +37,21 @@ body {
 	margin: 5px;
 	border-radius: 3px;
 }
+
 .img-container >div {
 	width: 40%;
 	height: 150px;
 	margin: 5px;
 	border-radius: 3px;
-
-
 }
 
 th, td {
   padding: 10px;
   border-bottom: 1px solid #ddd;
+}
+
+td {
+  border-top: 1px solid #ddd;
 }
 
 th {
@@ -74,6 +74,7 @@ tr:hover {
 .linkButton {
   background-color: white;
   border: 2px solid #008CBA;
+  border-radius: 25px;
   color: black;
   padding: 8px 12px;
   text-align: center;
@@ -81,12 +82,39 @@ tr:hover {
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
+  align-content: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+}
+
+.linkButton:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.linkButton p{
+  align-content: center;
+}
+
+.linkButton2 {
+  background-color: white;
+  border: 2px solid #008CBA;
+  border-radius: 25px;
+  color: black;
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
 }
 
-.linkButton:hover {
+.linkButton2:hover {
   background-color: #008CBA;
   color: white;
 }

@@ -1,14 +1,16 @@
 <h1>Mars overview Display</h1>
 
 <div class="searchForm">
+  <h2><b>Search for a month of data</b></h2>
   <%= form_with :url => {:action => :display}, :method => "get" do |form| %>
-    <em><%= form.label "Select Year and Month:" %>></em>
+    <em><%= form.label "Select Year and Month:", style: 'font-size:18px;' %></em>
     <%= form.select(:search_year, @years) %>
     <%= form.select(:search_month, @months) %>
-    <%= form.submit("Run Again!") %>
+    <%= form.submit "Run Again!", :class => 'linkButton2' %>
   <% end %>
 </div>
 
+<h2>Selected Data</h2>
 <table>
   <thead>
   <tr>
@@ -31,7 +33,7 @@
       <td><%= weather.solstice %></td>
       <td><%= weather.minTemp %></td>
       <td><%= weather.maxTemp %></td>
-      <td><%= link_to 'Show', weather %></td>
+      <td><%= link_to 'Show', weather, class: 'linkButton2' %></td>
     </tr>
   <% end %>
   </tbody>

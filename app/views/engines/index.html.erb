@@ -19,11 +19,11 @@
         <td><%= engine.model %></td>
         <td><%= engine.astronauts %></td>
         <td>&nbsp;</td>
-        <td><%= link_to 'Show', engine %></td>
+        <td><%= link_to 'Show', engine, class: 'linkButton2' %></td>
         <td>&nbsp;</td>
-        <td><%= link_to 'Edit', edit_engine_path(engine) %></td>
+        <td><%= link_to 'Edit', edit_engine_path(engine), class: 'linkButton2' %></td>
         <td>&nbsp;</td>
-        <td><%= link_to 'Destroy', engine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', engine, method: :delete, data: { confirm: 'Are you sure?' }, class: 'linkButton2' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -31,6 +31,6 @@
 
 <br>
 
-<%= link_to 'New Rocket', new_engine_path %>
-
-<p><a href = '/engines.json' target = '_blank' align = 'bottom'> See Json</a></p>
+<%= link_to 'New Rocket', new_engine_path, class: 'linkButton' %>
+<br>
+<a href = '/engines.json' target = '_blank'><div class="linkButton">See Json</div></a>

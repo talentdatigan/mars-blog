@@ -16,6 +16,7 @@
   <%= @rover.purpose %>
 </p>
 
-<%= link_to 'Edit', edit_rover_path(@rover) %> |
-<%= link_to 'Back', rovers_path %>
-<p><a href = '<%= @rover.id %>.json' target = '_blank'>See Json</a></p>
+<%= link_to 'Edit', edit_rover_path(@rover), :class => 'linkButton' %> |
+<%= link_to 'Back', rovers_path, :class => 'linkButton' %>
+<br>
+<a href = '<%= @rover.id %>.json' target = '_blank'><div class="linkButton">See Json</div></a>

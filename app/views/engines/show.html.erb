@@ -15,6 +15,7 @@
   <%= @engine.astronauts %>
 </p>
 
-<%= link_to 'Edit', edit_engine_path(@engine) %> |
-<%= link_to 'Back', engines_path %>
-<p><a href = '<%= @engine.id %>.json' target = '_blank'>See Json</a></p>
+<div class="linkButton"><%= link_to 'Edit', edit_engine_path(@engine) %></div> |
+<div class="linkButton"><%= link_to 'Back', engines_path %></div>
+<br>
+<a href = '<%= @engine.id %>.json' target = '_blank'><div class="linkButton">See Json</div></a>

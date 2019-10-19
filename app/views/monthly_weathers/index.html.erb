@@ -18,13 +18,11 @@
         <td><%= monthly_weather.month %></td>
         <td><%= monthly_weather.minTemp %></td>
         <td><%= monthly_weather.maxTemp %></td>
-        <td><%= link_to 'Show', monthly_weather %></td>
+        <td><%= link_to 'Show', monthly_weather, class: 'linkButton2'  %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Monthly Weather', new_monthly_weather_path %>
-<p><a href = '/monthly_weathers.json' target = '_blank' align = 'bottom'> See Json</a></p>
+<a href = '/monthly_weathers.json' target = '_blank' align = 'bottom'><div class="linkButton">See Json</div></a>
