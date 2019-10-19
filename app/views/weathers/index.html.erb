@@ -2,7 +2,8 @@
 
 <h1>Weathers</h1>
 
-<div class="from">
+<div class="searchForm">
+  <h2><b>Search for a month of data</b></h2>
   <%= form_with :url => {:action => :index}, :method => "get" do |form| %>
   <em><%= form.label "Select Year and Month:" %>></em>
     <%= form.select(:search_year, @years) %>

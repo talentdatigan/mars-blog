@@ -1,6 +1,6 @@
 <h1>Mars overview Display</h1>
 
-<div class="from">
+<div class="searchForm">
   <%= form_with :url => {:action => :display}, :method => "get" do |form| %>
     <em><%= form.label "Select Year and Month:" %>></em>
     <%= form.select(:search_year, @years) %>
