@@ -1,7 +1,9 @@
 <html>
 
-<div class = "container_for_links">
-<ul class="nav nav-pills">
+ 
+<div class = "nav-container" role = "navigation">
+<nav class="nav nav-pills">
+ 
   <li><%= link_to "Home" ,"/"%></li>
   <li><%= link_to "Mars Weather", "/mars_overview/mars_weather"%></li>
   <li><%= link_to "Insight Mission", "/mars_overview/insight_mission" %></li>
@@ -10,7 +12,7 @@
   <li><%= link_to "Launch in Orbit", orbits_path %></li>
   <li><%= link_to "Historical weather Data", weathers_path %></li>
   <li><%= link_to "2018 Average Monthly Temperatures", monthly_weathers_path %></li>
-</ul>
+</nav>
 </div>
 
 <body>
