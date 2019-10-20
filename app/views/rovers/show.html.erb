@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+<p><img src = "/assets/walle.jpg" width="650" height="450" align = "right">
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @rover.name %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @rover.model %>
+</p>
+
+<p>
+  <strong>Purpose:</strong>
+  <%= @rover.purpose %>
+</p>
+
+<%= link_to 'Edit', edit_rover_path(@rover), :class => 'linkButton' %> |
+<%= link_to 'Back', rovers_path, :class => 'linkButton' %>
+<br>
+<a href = '<%= @rover.id %>.json' target = '_blank'><div class="linkButton">See Json</div></a>

@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @orbit.name %>
+</p>
+
+<p>
+  <strong>Form:</strong>
+  <%= @orbit.form %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @orbit.height %>
+</p>
+
+<p>
+  <strong>Engine:</strong>
+  <%= @orbit.engine.name %>
+</p>
+
+<%= link_to 'Edit', edit_orbit_path(@orbit), class: 'linkButton' %> |
+<%= link_to 'Back', orbits_path, class: 'linkButton' %>
+<br>
+<a href = '<%= @orbit.id %>.json' target = '_blank'><div class="linkButton">See Json</div></a>

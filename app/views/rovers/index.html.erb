@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Rovers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name &nbsp;</th>
+      <th>Model &nbsp;</th>
+      <th> &nbsp;Purpose</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <p><img src = "/assets/walle.jpg" width="650" height="450" align = "right">
+</p>
+
+  <tbody>
+    <% @rovers.each do |rover| %>
+      <tr>
+      
+        <td><%= rover.name %></td>
+        <td><%= rover.model  %></td> 
+        <td><%= rover.purpose %></td>
+        <td>&nbsp;</td>
+        <td><%= link_to 'Show', rover, :class => 'linkButton2' %></td>
+        <td>&nbsp;</td>
+        <td><%= link_to 'Edit', edit_rover_path(rover), :class => 'linkButton2' %></td>
+        <td>&nbsp;</td>
+        <td><%= link_to 'Destroy', rover, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'linkButton2' %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rover', new_rover_path, :class => 'linkButton' %>
+<br>
+<a href = '/rovers.json' target = '_blank' align = 'bottom'><div class="linkButton">See Json</div></a>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @monthly_weather.month %>
+</p>
+
+<p>
+  <strong>Mintemp:</strong>
+  <%= @monthly_weather.minTemp %>
+</p>
+
+<p>
+  <strong>Maxtemp:</strong>
+  <%= @monthly_weather.maxTemp %>
+</p>
+
+<%= link_to 'Back', monthly_weathers_path, class: 'linkButton' %>
+<a href = '<%= @monthly_weather.id %>.json' target = '_blank'><div class="linkButton">See Json</div></a>

@@ -1,0 +1,48 @@
+<html>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<h2>WEATHER ON MARS</h2>
+<body>
+<div>
+<p><iframe src='https://mars.nasa.gov/layout/embed/image/insightweather/' width='850' height='650'  scrolling='no' frameborder='0' align = 'right'></iframe></p>
+
+<div class = "img-container" >
+<div>
+The plot on the right is being updated daily throughout the duration of the InSight mission. The plot shows the latest three sols (Martian days) of weather data at InSight’s landing site near the equator of Mars. Time runs along the bottom of the plot with the most recent data at the right. Numbers along the bottom show hours of local time at the InSight lander (Local True Solar Time, based on Sun angle). Lighter and darker vertical bands indicate daytime and nighttime at the lander, respectively. The corresponding Earth time is also shown at the top of the plot, in Coordinated Universal Time (UTC). All data points are one-hour averages of the calibrated data from the spacecraft.</div>
+</div>
+<p><img src = "/assets/mars_weather.png" width="850" height="450" alt="Mars Weather Statistic ">
+</p>
+
+<div id="container" style="width:100%; height:400px;"></div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var myChart = Highcharts.chart('container', {
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: 'Mars Temperature per Earth Month (2018)'
+        },
+        xAxis: {
+            categories: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+        },
+        yAxis: {
+            title: {
+                text: 'Temperature'
+            }
+        },
+        series: [{
+            name: 'Average Minimum temperature',
+            data:  <%= @MinTemps%>
+        }, {
+            name: 'Average Minimum temperature',
+            data: <%= @MaxTemps %>
+        }]
+    });
+});
+</script>
+</body>
+</font>
+</html>
+

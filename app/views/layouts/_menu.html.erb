@@ -1,0 +1,35 @@
+<html>
+
+ 
+<div class = "nav-container" role = "navigation">
+<nav class="nav nav-pills">
+ 
+  <li><%= link_to "Home" ,"/"%></li>
+  <li><%= link_to "Mars Weather", "/mars_overview/mars_weather"%></li>
+  <li><%= link_to "Insight Mission", "/mars_overview/insight_mission" %></li>
+  <li><%= link_to "Create a Rover", rovers_path %></li>
+  <li><%= link_to "Deploy a Rocket", engines_path %></li>
+  <li><%= link_to "Launch in Orbit", orbits_path %></li>
+  <li><%= link_to "Historical weather Data", weathers_path %></li>
+  <li><%= link_to "2018 Average Monthly Temperatures", monthly_weathers_path %></li>
+</nav>
+</div>
+
+<body>
+
+
+<style>
+body {
+	background-image: url("/assets/background.jpg ");
+    background-repeat:no-repeat;
+    background-size:cover;
+  background-attachment: fixed;
+} 
+
+</style>
+ 
+
+</body>
+</html>
+
+

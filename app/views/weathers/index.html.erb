@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Weathers</h1>
+
+<div class="searchForm">
+  <h2><b>Search for a month of data</b></h2>
+  <%= form_with :url => {:action => :index}, :method => "get" do |form| %>
+  <em><%= form.label "Select Year and Month:", style: 'font-size:18px;' %></em>
+    <%= form.select(:search_year, @years) %>
+    <%= form.select(:search_month, @months) %>
+    <%= form.submit "Go!", :class => 'linkButton' %>
+  <% end %>
+</div>
+
+<h1><b>Historical Weather Data</b></h1>
+<table>
+  <thead>
+  <tr>
+    <th>Day</th>
+    <th>Month</th>
+    <th>Year</th>
+    <th>Solstice</th>
+    <th>Mintemp</th>
+    <th>Maxtemp</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @weathers.each do |weather| %>
+    <tr>
+      <td><%= weather.day %></td>
+      <td><%= weather.month %></td>
+      <td><%= weather.year %></td>
+      <td><%= weather.solstice %></td>
+      <td><%= weather.minTemp %></td>
+      <td><%= weather.maxTemp %></td>
+      <td><%= link_to 'Show', weather, class: 'linkButton2'  %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<a href ='/weathers.json' target="_blank"><div class="linkButton">See Json</div></a>
