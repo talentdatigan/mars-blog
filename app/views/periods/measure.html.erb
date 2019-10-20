@@ -2,7 +2,13 @@
 <h1>Enter the height of your orbit and the period will be returned</h1>
 <%= form_tag( "/periods/measure", method: "get" ) do %>
 <%= label_tag "Enter the height of your orbit" %>
+
+  <% if @orbit_radius == nil %>
 <%= text_field_tag :height, nil, placeholder: "0"  %>
+    <% else %>
+    <%= text_field_tag :height, nil, placeholder: @orbit_radius.to_s  %>
+    <% end %>
+
 <%= submit_tag "Measure", :class => 'linkButton' %>
 <%end%>
 
