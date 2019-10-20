@@ -8,11 +8,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("packs/highcharts.js")
-require("jquery")
-require("jquery_ujs")
 
-import Highcharts from 'highcharts';
-window.Highcharts = Highcharts;
 
 
 
@@ -22,6 +18,3 @@ window.Highcharts = Highcharts;
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-$(function () {
-  $('[data-toggle=popover]').popover()
-})
