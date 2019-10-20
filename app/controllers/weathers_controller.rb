@@ -18,7 +18,6 @@ class WeathersController < ApplicationController
   # GET /weathers/1.json
   def show
   end
-
   
 
   private
