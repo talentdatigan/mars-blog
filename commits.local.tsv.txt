@@ -1,0 +1,30 @@
+f064da4	talentdatigan	Sun Oct 20 23:23:47 2019	changed jquery
+29abd6b	talentdatigan	Sun Oct 20 19:55:37 2019	Merge branch 'master' of https://github.com/talentdatigan/mars-blog
+e81eb01	talentdatigan	Sun Oct 20 19:54:56 2019	final changes to report
+e2d81af	Cael Milne	Sun Oct 20 19:20:20 2019	Add PowerPoint
+0046230	talentdatigan	Sun Oct 20 11:02:17 2019	report & readme update
+0345a6d	talentdatigan	Sun Oct 20 09:54:06 2019	Update gemfile for Heroku
+a5585e8	Cael	Sun Oct 20 03:32:00 2019	Added files to master - DO NOT MEGRE INTO THIS BRANCH
+83d4223	talentdatigan	Thu Oct 17 11:37:02 2019	diee
+215662b	talentdatigan	Thu Oct 17 11:34:17 2019	remove bugs
+58872f6	Cael	Tue Oct 15 22:28:23 2019	Graph is now working
+1caacb7	Cael	Tue Oct 15 22:12:46 2019	Got average weather values
+8e3dbf7	talentdatigan	Tue Oct 15 17:42:33 2019	Added monthly_weathers table
+7077996	talentdatigan	Tue Oct 15 17:10:48 2019	Pre scaffold
+0b067aa	talentdatigan	Tue Oct 15 09:39:40 2019	Merge branch 'master' of https://github.com/talentdatigan/mars-blog into working_branch2
+d330354	talentdatigan	Tue Oct 15 09:36:13 2019	victory
+9d45fb4	Cael	Sun Oct 13 23:47:02 2019	Added javascript file for chart
+7463b51	Cael	Sun Oct 13 23:35:44 2019	fixed conflict
+dc8e0db	Cael	Sun Oct 13 22:47:58 2019	Added Backup data
+ccf97a3	talentdatigan	Sun Oct 13 17:37:12 2019	added measure period feature + minor changes
+5eca4c5	talentdatigan	Sun Oct 13 14:07:48 2019	databases appeared
+e895ad1	Cael	Sun Oct 13 01:10:06 2019	Updated GitIgnore File to ignore .idea folder
+ff88e07	Cael	Sun Oct 13 01:07:38 2019	Fixed Background issue in weathers page
+55bafec	Cael	Sun Oct 13 00:54:31 2019	Parsed all weather data collected
+7433368	Cael	Sun Oct 13 00:51:58 2019	Test:add file to git
+9cbec9e	talentdatigan	Fri Oct 11 15:17:18 2019	orbits n rockets
+47b899a	talentdatigan	Wed Oct 9 21:21:13 2019	fourth commit
+e5f7a70	talentdatigan	Mon Oct 7 19:46:22 2019	third commit
+71b0275	talentdatigan	Fri Oct 4 22:06:30 2019	second commit
+8b0a9bb	talentdatigan	Thu Oct 3 22:20:28 2019	my first commit
+250d703	talentdatigan	Thu Oct 3 22:03:31 2019	first commit
